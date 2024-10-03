@@ -1,33 +1,32 @@
-// Esperamos a que se envíe el formulario
-document.getElementById("loginForm").addEventListener("submit", function (e) {
-  e.preventDefault(); // Evitamos que el formulario recargue la página
+document
+  .getElementById("loginForm")
+  .addEventListener("submit", async function (event) {
+    event.preventDefault();
 
-  const username = document.getElementById("username").value;
-  const password = document.getElementById("password").value;
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
 
-  fetch("https://fakestoreapi.com/auth/login", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      username: username,
-      password: password,
-    }),
-  })
-    .then((res) => res.json())
-    .then((json) => {
-      console.log(json);
+    try {
+      const response = await fetch("https://fakestoreapi.com/auth/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          username: username,
+          password: password,
+        }),
+      });
 
-      if (json.token) {
-        localStorage.setItem("authToken", json.token);
+      if (response.ok) {
+        const data = await response.json();
+        localStorage.setItem("token", data.token);
         window.location.href = "../html/shop.html";
       } else {
-        alert("Usuario no registrado");
+        alert("Usuario o contraseña incorrectos");
       }
-    })
-    .catch((error) => {
-      console.error("Error:", error);
-      alert("Ocurrió un error al intentar iniciar sesión");
-    });
-});
+    } catch (error) {
+      console.error("Error en la solicitud:", error);
+      alert("Error al intentar iniciar sesión");
+    }
+  });
