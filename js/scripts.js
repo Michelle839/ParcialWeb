@@ -18,9 +18,8 @@ document
         }),
       });
 
-      if (response.ok) {
-        const data = await response.json();
-        localStorage.setItem("token", data.token);
+      if (json.token) {
+        localStorage.setItem("authToken", json.token);
         window.location.href = "./shop.html";
       } else {
         alert("Usuario o contraseña incorrectos");
