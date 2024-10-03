@@ -73,11 +73,11 @@ document.getElementById("searchBtn").addEventListener("click", () => {
 });
 // Función para redirigir al usuario al index.html
 function redirigirAlIndex() {
-  window.location.href = "../index.html"; // Redirige a index.html
+  window.location.href = "./index.html"; // Redirige a index.html
 }
 // Función para redirigir al usuario al carrito.html
 function redirigirAlCarrito() {
-  window.location.href = "../html/carrito.html"; // Redirige a carrito.html
+  window.location.href = "./carrito.html"; // Redirige a carrito.html
 }
 
 // Agregar eventos de click a la imagen y al texto de "Salir"

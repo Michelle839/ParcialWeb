@@ -75,12 +75,12 @@ function llenarTablaPedidos(pedidos) {
 // Función para ver detalles de un pedido (puedes implementarla como desees)
 function verDetalles(pedidoId) {
   localStorage.setItem("pedidoId", pedidoId);
-  window.location.href = "../html/pedidos.html";
+  window.location.href = "./pedidos.html";
 }
 
 // Función para redirigir al usuario al index.html
 function redirigirAlIndex() {
-  window.location.href = "../index.html"; // Redirige a index.html
+  window.location.href = "./index.html"; // Redirige a index.html
 }
 
 // Agregar eventos de click a la imagen y al texto de "Salir"
