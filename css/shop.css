@@ -1,0 +1,149 @@
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #f8f8f8;
+  border-bottom: 1px solid #ccc;
+}
+
+.header-left h1 {
+  margin: 0;
+}
+.header-left p {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-style: italic;
+  text-align: center;
+}
+
+.header-right {
+  display: flex;
+  gap: 20px;
+}
+h2 {
+  text-align: center;
+  color: rgb(0, 76, 255);
+}
+
+.cart,
+.logout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cart img,
+.logout img {
+  width: 40px;
+  cursor: pointer;
+}
+
+.search-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: #f8f8f8;
+  border-bottom: 1px solid #ccc;
+}
+
+.search-section input {
+  width: 50%; /* Ajustamos el ancho al 50% de la pantalla */
+  padding: 8px;
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+.btn-search {
+  margin-left: 10px;
+  padding: 10px 20px;
+  background-color: blue;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.categories {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+#categoriesList {
+  display: flex;
+  gap: 10px;
+}
+
+.category {
+  padding: 10px 20px;
+  background-color: #e0e0e0;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.category:hover {
+  background-color: #a0edec;
+}
+
+#productsList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.product {
+  border: 1px solid #ccc;
+  padding: 10px;
+  width: 200px;
+  text-align: center;
+}
+
+.product img {
+  width: 150px; /* Fija el ancho de las imágenes */
+  height: 150px; /* Fija el alto de las imágenes */
+  object-fit: contain; /* Ajusta la imagen dentro del contenedor sin recortarla */
+  background-color: #f0f0f0; /* Fondo para imágenes más pequeñas */
+  padding: 10px; /* Añade espacio interno */
+}
+
+.product h4 {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.product p,
+.product button {
+  display: inline-block; /* Se alinean en una fila */
+  margin: 0;
+}
+
+.product-price-add {
+  display: flex; /* Usa flexbox para alinear horizontalmente */
+  justify-content: space-between; /* Separa el precio y el botón */
+  align-items: center; /* Alinea verticalmente al centro */
+  margin-top: 10px;
+}
+
+.product button {
+  background-color: rgb(255, 106, 0);
+  color: white;
+  padding: 5px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.product button:hover {
+  background-color: #ff9900;
+}

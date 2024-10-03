@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop Online</title>
+    <link rel="stylesheet" href="../css/shop.css" />
+  </head>
+  <body>
+    <!-- Encabezado -->
+    <header>
+      <div class="header-left">
+        <h1>Shop Online</h1>
+        <p>Anytime, Anywhere</p>
+      </div>
+      <div class="header-right">
+        <div class="cart" id="cart">
+          <img src="../img/carritoCompras.avif" alt="Carrito de compras" />
+          <p>Carrito</p>
+        </div>
+        <div class="logout" id="logout">
+          <img src="../img/exit.jpg" alt="Salir" />
+          <p>Salir</p>
+        </div>
+      </div>
+    </header>
+
+    <!-- Filtro de búsqueda -->
+    <section class="search-section">
+      <label for="search" id="searchLabel">Filtro de búsqueda:</label>
+      <input type="text" id="search" placeholder="Buscar productos..." />
+      <button id="searchBtn" class="btn-search">Buscar</button>
+    </section>
+
+    <!-- Título de productos -->
+    <h2>Productos</h2>
+
+    <!-- Categorías -->
+    <section class="categories">
+      <div id="categoriesList"></div>
+    </section>
+
+    <!-- Listado de productos -->
+    <section class="products">
+      <div id="productsList"></div>
+    </section>
+    <script src="../js/shop.js"></script>
+  </body>
+</html>
